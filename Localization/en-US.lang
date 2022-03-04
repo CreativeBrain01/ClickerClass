@@ -304,6 +304,14 @@ ItemName.SandstormClicker=Sandstorm Clicker
 ClickEffect.DustDevil.Name=Dust Devil
 ClickEffect.DustDevil.Description=Creates a violent tornado that chases down enemies
 
+ItemName.SkyeLightClicker=The Skye Lighter
+ClickEffect.SkyeLight.Name=SkyeLight
+ClickEffect.SkyeLight.Description=Deals damage in a large area of effect
+
+ItemName.StarlowClicker=Starlow Clicker
+ClickEffect.Starlow.Name=Starlow
+ClickEffect.Starlow.Description=Deals damage in a large area of effect
+
 ItemName.ShadowyClicker=Shadowy Clicker
 ClickEffect.Curse.Name=Curse
 ClickEffect.Curse.Description=Fires a shadowflame skull towards the nearest enemy
