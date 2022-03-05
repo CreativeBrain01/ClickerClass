@@ -242,6 +242,9 @@ namespace ClickerClass.NPCs
 				case NPCID.SkeletonMerchant:
 					shop.item[nextSlot++].SetDefaults(ModContent.ItemType<CandleClicker>());
 					break;
+				case NPCID.Dryad:
+					shop.item[nextSlot++].SetDefaults(ModContent.ItemType<ThePotato>());
+					break;
 			}
 		}
 

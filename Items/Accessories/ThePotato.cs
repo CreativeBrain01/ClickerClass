@@ -16,17 +16,18 @@ namespace ClickerClass.Items.Accessories
 				(Player player, Vector2 position, int type, int damage, float knockBack)
 			{
 				int potato = ModContent.ProjectileType<ThePotatoPro>();
-				Projectile.NewProjectile(Main.MouseWorld, Vector2.Zero, potato, (int)(damage * 0.5), 3f, player.whoAmI, Main.rand.Next(Main.projFrames[potato]));
+				Projectile.NewProjectile(Main.MouseWorld, Vector2.Zero, potato, 25, 3f, player.whoAmI, Main.rand.Next(Main.projFrames[potato]));
 			});
 		}
 
 		public override void SetDefaults()
 		{
+			base.SetDefaults();
 			item.width = 20;
 			item.height = 20;
 			item.accessory = true;
 			item.value = 25000;
-			item.rare = 1;
+			item.rare = 2;
 		}
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
