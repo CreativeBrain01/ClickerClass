@@ -169,6 +169,8 @@ namespace ClickerClass
 		public static string Curse { get; internal set; } = string.Empty;
 		public static string AutoClick { get; internal set; } = string.Empty;
 		public static string Siphon { get; internal set; } = string.Empty;
+		public static string SkyeLight { get; internal set; } = string.Empty;
+		public static string Starlow { get; internal set; } = string.Empty;
 		public static string Splash { get; internal set; } = string.Empty;
 		public static string StarStorm { get; internal set; } = string.Empty;
 		public static string PhaseReach { get; internal set; } = string.Empty;

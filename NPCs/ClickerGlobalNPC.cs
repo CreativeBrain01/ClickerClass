@@ -87,6 +87,13 @@ namespace ClickerClass.NPCs
 					Item.NewItem(npc.Hitbox, ModContent.ItemType<ShadowyClicker>(), 1, false, -1);
 				}
 			}
+			if (npc.type == NPCID.Harpy && npc.value > 0f)
+			{
+				if (Main.rand.NextBool(50))
+				{
+					Item.NewItem(npc.Hitbox, ModContent.ItemType<SkyeLightClicker>(), 1, false, -1);
+				}
+			}
 			if ((npc.type == NPCID.Frankenstein || npc.type == NPCID.SwampThing) && npc.value > 0f)
 			{
 				if (Main.rand.NextBool(25))
@@ -121,6 +128,13 @@ namespace ClickerClass.NPCs
 				{
 					Item.NewItem(npc.Hitbox, ModContent.ItemType<SandstormClicker>(), 1, false, -1);
 				}
+			}
+			if (npc.type == NPCID.Shark)
+			{
+				if(Main.rand.NextBool(20))
+				{
+					Item.NewItem(npc.Hitbox, ModContent.ItemType<SurfFragment>(), 1);
+				}			
 			}
 			if (npc.type == NPCID.IceGolem)
 			{
