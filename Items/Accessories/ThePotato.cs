@@ -1,5 +1,6 @@
 ﻿using ClickerClass.Projectiles;
 using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;
 
@@ -12,17 +13,20 @@ namespace ClickerClass.Items.Accessories
 			base.SetStaticDefaults();
 
 			ClickEffect.ThePotato = ClickerSystem.RegisterClickEffect
-				(mod, "ThePotato", "ThePotato", null, 1, new Color(255, 255, 255, 0), delegate 
+				(mod, "ThePotato", "ThePotato", null, 2, new Color(255, 255, 255, 0), delegate 
 				(Player player, Vector2 position, int type, int damage, float knockBack)
 			{
 				int potato = ModContent.ProjectileType<ThePotatoPro>();
 				Projectile.NewProjectile(Main.MouseWorld, Vector2.Zero, potato, 25, 3f, player.whoAmI, Main.rand.Next(Main.projFrames[potato]));
 			});
+
+			Tooltip.SetDefault("Whatever you do," + "\n" + 
+				"don't reveal your plans on YouTube," + "\n" + 
+				"you fool, you absolute buffoon.");
 		}
 
 		public override void SetDefaults()
 		{
-			base.SetDefaults();
 			item.width = 20;
 			item.height = 20;
 			item.accessory = true;
