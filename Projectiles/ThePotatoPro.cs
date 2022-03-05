@@ -14,7 +14,7 @@ namespace ClickerClass.Projectiles
 		{
 			projectile.width = 10;
 			projectile.height = 10;
-			projectile.aiStyle = 5;
+			projectile.aiStyle = 25;
 			projectile.friendly = true;
 			projectile.ignoreWater = true;
 			projectile.timeLeft = 300;
