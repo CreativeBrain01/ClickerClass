@@ -31,7 +31,15 @@ namespace ClickerClass.Items.Armors
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.SharkFin, 5);
+			recipe.AddIngredient(ModContent.ItemType<SurfFragment>(), 1);
+			recipe.AddIngredient(ItemID.AdamantiteBar, 20);
+			recipe.AddTile(TileID.MythrilAnvil);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ModContent.ItemType<SurfFragment>(), 1);
+			recipe.AddIngredient(ItemID.TitaniumBar, 20);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
