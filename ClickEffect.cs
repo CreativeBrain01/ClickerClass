@@ -133,6 +133,7 @@ namespace ClickerClass
 		public static string StickyKeychain { get; internal set; } = string.Empty;
 		public static string ChocolateChip { get; internal set; } = string.Empty;
 		public static string BigRedButton { get; internal set; } = string.Empty;
+		public static string ThePotato { get; internal set; } = string.Empty;
 
 		//Clicker
 		public static string TrueStrike { get; internal set; } = string.Empty;
