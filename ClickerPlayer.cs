@@ -138,6 +138,7 @@ namespace ClickerClass
 		public bool accCookie2 = false; //different visuals
 		public bool accClickingGlove = false;
 		public bool accAncientClickingGlove = false;
+		public bool accGhostHand = false;
 		public bool accRegalClickingGlove = false;
 		public bool accPortableParticleAccelerator = false; //"is wearing"
 		public bool accPortableParticleAccelerator2 = false; //"is active", client only
@@ -543,10 +544,7 @@ namespace ClickerClass
 						autoRevertSelectedItem = false;
 					}
 				}
-			}
 
-			if (player.whoAmI == Main.myPlayer)
-			{
 				if (player.itemTime == 0 && player.itemAnimation == 0)
 				{
 					if (accRegalClickingGlove && accClickingGloveTimer > 30)
@@ -563,6 +561,14 @@ namespace ClickerClass
 					{
 						QuickUseItemInSlot(player.selectedItem);
 						accClickingGloveTimer = 0;
+					}
+				}
+
+				if (ClickerSystem.IsClickerWeapon(player.HeldItem, out ClickerItemCore clickerItem))
+				{
+					if (player.GetModPlayer<ClickerPlayer>().accGhostHand)
+					{
+						
 					}
 				}
 			}

@@ -132,19 +132,36 @@ namespace ClickerClass.Items
 
 				if (!clickerPlayer.HasClickEffect(ClickEffect.PhaseReach))
 				{
-					//collision
-					Vector2 motherboardPosition = clickerPlayer.setMotherboardPosition;
-					bool inRange = Vector2.Distance(Main.MouseWorld, player.Center) < clickerPlayer.ClickerRadiusReal && Collision.CanHit(new Vector2(player.Center.X, player.Center.Y - 12), 1, 1, Main.MouseWorld, 1, 1);
-					bool inRangeMotherboard = Vector2.Distance(Main.MouseWorld, motherboardPosition) < clickerPlayer.ClickerRadiusMotherboard && Collision.CanHit(motherboardPosition, 1, 1, Main.MouseWorld, 1, 1);
-					//bool allowMotherboard = player.GetModPlayer<ClickerPlayer>().clickerMotherboardSet && player.altFunctionUse == 2;
+					if (!clickerPlayer.accGhostHand)
+					{
+						//Main.NewText("Ghost Hand Bool False");
+						//collision
+						Vector2 motherboardPosition = clickerPlayer.setMotherboardPosition;
+						bool inRange = Vector2.Distance(Main.MouseWorld, player.Center) < clickerPlayer.ClickerRadiusReal && Collision.CanHit(new Vector2(player.Center.X, player.Center.Y - 12), 1, 1, Main.MouseWorld, 1, 1);
+						bool inRangeMotherboard = Vector2.Distance(Main.MouseWorld, motherboardPosition) < clickerPlayer.ClickerRadiusMotherboard && Collision.CanHit(motherboardPosition, 1, 1, Main.MouseWorld, 1, 1);
+						//bool allowMotherboard = player.GetModPlayer<ClickerPlayer>().clickerMotherboardSet && player.altFunctionUse == 2;
 
-					if (inRange || (inRangeMotherboard && player.altFunctionUse != 2))
+						if (inRange || (inRangeMotherboard && player.altFunctionUse != 2))
+						{
+							return true;
+						}
+						else
+						{
+							return false;
+						}
+					} else
 					{
-						return true;
-					}
-					else
-					{
-						return false;
+						//Main.NewText("Ghost Hand Bool True");
+						bool inRange = Vector2.Distance(Main.MouseWorld, player.Center) < clickerPlayer.ClickerRadiusReal/* && Collision.CanHit(new Vector2(player.Center.X, player.Center.Y - 12), 1, 1, Main.MouseWorld, 1, 1)*/;
+
+						if (inRange)
+						{
+							return true;
+						}
+						else
+						{
+							return false;
+						}
 					}
 				}
 			}

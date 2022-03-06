@@ -12,6 +12,11 @@ namespace ClickerClass.Items
 	public abstract class ClickerWeapon : ClickerItem
 	{
 		/// <summary>
+		/// Controls if the clicker can be used through blocks
+		/// </summary>
+		public bool ignoreTiles = false;
+
+		/// <summary>
 		/// Call this in the inherited class as base.SetStaticDefaults() at the start of SetStaticDefaults. You can change the default tooltip after it
 		/// </summary>
 		public override void SetStaticDefaults()
