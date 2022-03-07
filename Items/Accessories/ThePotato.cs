@@ -13,7 +13,7 @@ namespace ClickerClass.Items.Accessories
 			base.SetStaticDefaults();
 
 			ClickEffect.ThePotato = ClickerSystem.RegisterClickEffect
-				(mod, "ThePotato", "ThePotato", null, 2, new Color(255, 255, 255, 0), delegate 
+				(mod, "ThePotato", "ThePotato", null, 6, new Color(255, 255, 255, 0), delegate 
 				(Player player, Vector2 position, int type, int damage, float knockBack)
 			{
 				int potato = ModContent.ProjectileType<ThePotatoPro>();
