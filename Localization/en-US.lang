@@ -1,4 +1,5 @@
 # English translation file
+# English translation file
 
 # Buffs
 #######
@@ -31,6 +32,9 @@ BuffDescription.OverclockBuff=Every click will trigger a click effect
 
 BuffName.Stunned=Stunned
 BuffDescription.Stunned=Stunned in place
+
+BuffName.WaveSpeed=WaveSpeed
+BuffDescription.WaveSpeed=Ride the wave!
 
 # Commons
 #######
@@ -166,6 +170,15 @@ ItemName.PrecursorHelmet=Precursor Helmet
 ItemTooltip.PrecursorHelmet={$Mods.ClickerClass.Common.Tooltips.IncreasesClickDamage} by 8%
 SetBonus.Precursor=Clicking causes an additional delayed fiery click at 25% the damage
 
+ItemName.SurfShirt=Surf Shirt
+ItemTooltip.SurfShirt={$Mods.ClickerClass.Common.Tooltips.IncreasesClickDamage} by 8%\n{$Mods.ClickerClass.Common.Tooltips.IncreasesBaseClickRadius} by 12%
+
+ItemName.SurfBoots=Surf Boots
+ItemTooltip.SurfBoots=Increases movement speed by 7%
+
+ItemName.SurfVisor=Surf Visor
+ItemTooltip.SurfVisor={$Mods.ClickerClass.Common.Tooltips.IncreasesClickCritChance} by 6%
+SetBonus.Surf=Clicking an enemy gives you a wave of movement speed
 
 # Consumables
 #######
