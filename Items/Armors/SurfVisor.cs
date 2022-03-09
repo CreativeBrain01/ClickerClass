@@ -36,7 +36,7 @@ namespace ClickerClass.Items.Armors
 		public override void UpdateArmorSet(Player player)
 		{
 			player.setBonus = LangHelper.GetText("SetBonus.Surf");
-			player.GetModPlayer<ClickerPlayer>().setMice = true;
+			player.GetModPlayer<ClickerPlayer>().setSurf = true;
 		}
 
 		public override void AddRecipes()

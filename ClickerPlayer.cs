@@ -125,6 +125,10 @@ namespace ClickerClass
 		public bool setOverclock = false;
 		public bool SetOverclockDraw => setOverclock && setOverclockAllowed;
 
+		public bool setSurfAllowed = true;
+		public bool setSurf = false;
+		public bool SetSurfDraw => setSurf && setSurfAllowed;
+
 		//Acc
 		[Obsolete("Use HasClickEffect(\"ClickerClass:ChocolateChip\") and EnableClickEffect(\"ClickerClass:ChocolateChip\") instead", false)]
 		public bool accChocolateChip = false;
@@ -449,7 +453,6 @@ namespace ClickerClass
 			ResetAllClickEffects();
 
 			//Armor
-			setMiceAllowed = true;
 			setMotherboard = false;
 			setMiceAllowed = true;
 			setMice = false;
@@ -457,6 +460,8 @@ namespace ClickerClass
 			setPrecursor = false;
 			setOverclockAllowed = true;
 			setOverclock = false;
+			setSurfAllowed = true;
+			setSurf = false;
 
 			//Acc
 			accEnchantedLED = false;
@@ -910,6 +915,12 @@ namespace ClickerClass
 						NetMessage.SendData(MessageID.SyncItem, -1, -1, null, coin, 1f);
 					}
 				}
+
+				
+				if(setSurf)
+				{
+					player.AddBuff(mod.BuffType("WaveSpeed"), 120);
+				}
 			}
 			
 			outOfCombatTimer = OutOfCombatTimeMax;
@@ -918,6 +929,7 @@ namespace ClickerClass
 		public override void OnHitNPC(Item item, NPC target, int damage, float knockback, bool crit)
 		{
 			outOfCombatTimer = OutOfCombatTimeMax;
+
 		}
 
 		public override void Hurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit)
