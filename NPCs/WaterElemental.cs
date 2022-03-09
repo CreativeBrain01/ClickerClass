@@ -12,6 +12,8 @@ namespace ClickerClass.NPCs
 {
 	public class WaterElemental : ModNPC
 	{
+		private int laserTimer = 0;
+
 		public WaterElemental()
 		{
 		}
@@ -27,7 +29,6 @@ namespace ClickerClass.NPCs
             npc.height = 36;
             npc.aiStyle = 16;
 			npc.noGravity = true;
-			npc.stepSpeed = 500f;
 			npc.damage = 70;
             npc.defense = 35;
             npc.lifeMax = 4000;
@@ -81,10 +82,19 @@ namespace ClickerClass.NPCs
 				Vector2 targetPosition = Main.player[npc.target].Center;
 				Vector2 direction = targetPosition - position;
 				direction.Normalize();
-				float speed = 10f;
-				int type = ProjectileID.GreenLaser;
-				int damage = 30; //If the projectile is hostile, the damage passed into NewProjectile will be applied doubled, and quadrupled if expert mode, so keep that in mind when balancing projectiles
-				Projectile.NewProjectile(position, direction * speed, type, damage, 0f, Main.myPlayer);
+				npc.position += direction * 3f;
+				if(laserTimer > 45)
+				{
+					float speed = 10f;
+					int type = ProjectileID.GreenLaser;
+					int damage = 30; //If the projectile is hostile, the damage passed into NewProjectile will be applied doubled, and quadrupled if expert mode, so keep that in mind when balancing projectiles
+					Projectile.NewProjectile(position, direction * speed, type, damage, 0f, Main.myPlayer);
+					laserTimer = 0;
+				}
+				else
+				{
+					laserTimer++;
+				}
 			}
         }
     }
