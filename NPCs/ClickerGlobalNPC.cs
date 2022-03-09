@@ -129,13 +129,6 @@ namespace ClickerClass.NPCs
 					Item.NewItem(npc.Hitbox, ModContent.ItemType<SandstormClicker>(), 1, false, -1);
 				}
 			}
-			if (npc.type == NPCID.Shark)
-			{
-				if(Main.rand.NextBool(20))
-				{
-					Item.NewItem(npc.Hitbox, ModContent.ItemType<SurfFragment>(), 1);
-				}			
-			}
 			if (npc.type == NPCID.IceGolem)
 			{
 				if (Main.rand.NextBool())
