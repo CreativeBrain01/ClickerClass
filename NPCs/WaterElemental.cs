@@ -36,18 +36,11 @@ namespace ClickerClass.NPCs
             npc.DeathSound = SoundID.NPCDeath1;
             npc.knockBackResist = 100f;
             animationType = NPCID.Shark;
-        }
 
-		/*
-		public static bool SpawnNPC(int x, int y, int playerID)
-		{
-			if(Main.hardMode && Main.player[playerID].ZoneBeach && Main.rand.Next(50) == 1)
-			{
-				return true;
-			}
-			return false;
-		}
-		*/
+			npc.buffImmune[Terraria.ID.BuffID.Poisoned] = true;
+			npc.buffImmune[Terraria.ID.BuffID.OnFire] = true;
+			npc.buffImmune[Terraria.ID.BuffID.Confused] = true;
+        }
 
 		public override float SpawnChance(NPCSpawnInfo spawnInfo)
 		{
@@ -82,12 +75,13 @@ namespace ClickerClass.NPCs
 				Vector2 targetPosition = Main.player[npc.target].Center;
 				Vector2 direction = targetPosition - position;
 				direction.Normalize();
-				npc.position += direction * 3f;
-				if(laserTimer > 45)
+				npc.position += direction * 2.5f;
+				if(laserTimer > 60)
 				{
 					float speed = 10f;
-					int type = ProjectileID.GreenLaser;
-					int damage = 30; //If the projectile is hostile, the damage passed into NewProjectile will be applied doubled, and quadrupled if expert mode, so keep that in mind when balancing projectiles
+					int type = ProjectileID.MartianWalkerLaser;
+					int damage = 20; 
+					//If the projectile is hostile, the damage passed into NewProjectile will be applied doubled, and quadrupled if expert mode, so keep that in mind when balancing projectiles
 					Projectile.NewProjectile(position, direction * speed, type, damage, 0f, Main.myPlayer);
 					laserTimer = 0;
 				}
