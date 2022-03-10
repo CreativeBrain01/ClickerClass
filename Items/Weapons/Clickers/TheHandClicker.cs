@@ -37,6 +37,7 @@ namespace ClickerClass.Items.Weapons.Clickers
 			item.rare = 1;
 			item.autoReuse = true;
 			item.useTime = 1;
+			item.useStyle = 4;
 		}
 	}
 }
