@@ -23,7 +23,7 @@ namespace ClickerClass.Projectiles
 			projectile.friendly = true;
 			projectile.tileCollide = false;
 			projectile.penetrate = -1;
-			projectile.timeLeft = 10;
+			projectile.timeLeft = 1;
 			projectile.usesLocalNPCImmunity = true;
 			projectile.localNPCHitCooldown = 10;
 		}

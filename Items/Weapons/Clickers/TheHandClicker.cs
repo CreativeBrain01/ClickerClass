@@ -36,7 +36,7 @@ namespace ClickerClass.Items.Weapons.Clickers
 			item.value = 180000;
 			item.rare = 1;
 			item.autoReuse = true;
-			item.useTime = 0;
+			item.useTime = 1;
 		}
 	}
 }
