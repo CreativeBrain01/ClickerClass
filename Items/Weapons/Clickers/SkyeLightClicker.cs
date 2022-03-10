@@ -12,9 +12,12 @@ namespace ClickerClass.Items.Weapons.Clickers
 		{
 			base.SetStaticDefaults();
 
-			ClickEffect.SkyeLight = ClickerSystem.RegisterClickEffect(mod, "SkyeLight", null, null, 8, new Color(255, 3, 62), delegate (Player player, Vector2 position, int type, int damage, float knockBack)
+			ClickEffect.SkyeLight = ClickerSystem.RegisterClickEffect(mod, "SkyeLight", null, null, 5, new Color(255, 3, 62), delegate (Player player, Vector2 position, int type, int damage, float knockBack)
 			{
-				Projectile.NewProjectile(Main.MouseWorld, Vector2.Zero, ModContent.ProjectileType<DarkClickerPro>(), damage, knockBack, player.whoAmI);
+				Vector2 targetPosition = player.Center;
+				Vector2 direction = targetPosition - Main.MouseWorld;
+				float speed = 10f;
+				Projectile.NewProjectile(Main.MouseWorld, -direction * speed, ProjectileID.HarpyFeather, damage, knockBack, player.whoAmI);
 			});
 		}
 

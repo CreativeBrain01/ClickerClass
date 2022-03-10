@@ -7,6 +7,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Utilities;
+using ClickerClass.Items.Weapons.Clickers;
 
 namespace ClickerClass.NPCs {
     [AutoloadHead]
@@ -100,5 +101,9 @@ namespace ClickerClass.NPCs {
             multiplier = 7;
         }
 
-    }
+		public override void NPCLoot()
+		{
+			Item.NewItem(npc.Hitbox, ModContent.ItemType<TheHandClicker>(), 1);
+		}
+	}
 }
