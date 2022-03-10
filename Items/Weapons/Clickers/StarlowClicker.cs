@@ -26,7 +26,7 @@ namespace ClickerClass.Items.Weapons.Clickers
 			SetDust(item, 14);
 			AddEffect(item, ClickEffect.Starlow);
 
-			item.damage = 39;
+			item.damage = 15;
 			item.width = 30;
 			item.height = 30;
 			item.knockBack = 1f;
