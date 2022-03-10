@@ -195,6 +195,11 @@ ItemName.MicePickaxe=Mice Pickaxe
 
 # Clickers
 #######
+ItemName.AbhorrentClicker=Abhorrent Clicker
+ClickEffect.AbhorrentStrike.Name=Abhorrent Strike
+ClickEffect.AbhorrentStrike.Description=Apples a debuff from the various lands
+ItemTooltip.AbhorrentClicker=This is getting out of hand\nWho let Ana make a weapon
+
 ItemName.AdamantiteClicker=Adamantite Clicker
 ClickEffect.TrueStrike.Name=True Strike
 ClickEffect.TrueStrike.Description=Deals double damage and always inflicts a critical hit

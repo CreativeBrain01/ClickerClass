@@ -137,6 +137,7 @@ namespace ClickerClass
 
 		//Clicker
 		public static string TrueStrike { get; internal set; } = string.Empty;
+		public static string AbhorrentStrike { get; internal set; } = string.Empty;
 		public static string HolyNova { get; internal set; } = string.Empty;
 		public static string Spiral { get; internal set; } = string.Empty;
 		public static string Lacerate { get; internal set; } = string.Empty;
