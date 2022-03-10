@@ -179,6 +179,7 @@ namespace ClickerClass
 		public static string ShadowLash { get; internal set; } = string.Empty;
 		public static string WebSplash { get; internal set; } = string.Empty;
 		public static string WildMagic { get; internal set; } = string.Empty;
+		public static string TheHand { get; internal set; } = string.Empty;
 		#endregion
 
 		public static void Unload()
